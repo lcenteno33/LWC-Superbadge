@@ -8,10 +8,18 @@
         <h2 class="slds-truncate slds-text-heading_small">{boat.Contact__r.Name}</h2>
     </div>
 
-    <div class="slds-text-body_small">Boat's Price USD
-        <lightning-formatted-number value={boat.Price__c} maximum-fraction-digits="2"></lightning-formatted-number>
+    <div class="slds-text-body_small">
+        <p>
+            Boat's Price USD
+            <lightning-formatted-number value={boat.Price__c} maximum-fraction-digits="2"></lightning-formatted-number>
+        </p>
     </div>
-    <div class="slds-text-body_small">Boat's Length{boat.Length__c}</div>
-    <div class="slds-text-body_small">Boat's Type{BoatType__r.Name}</div>
+    <div class="slds-text-body_small">
+        <p>Boat's Length{boat.Length__c}</p>
+    </div>
+    <div class="slds-text-body_small">
+        <p>Boat's Type{boat.BoatType__r.Name}</p>
+    </div>
+    
 
 </template>
