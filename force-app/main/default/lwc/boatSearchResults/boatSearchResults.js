@@ -24,15 +24,13 @@ export default class BoatSearchResults extends LightningElement {
         if (data) {
             //console.log('___Data en Boat Search Results___', data);
 
-            // this.boats = data;
+            this.boats = data;
             
             
-            this.boats = data.map(boat => {
-                console.log('___Data from the controller:___', boat )
-              return { id: boat.Id, name: boat.Name }
-            });
-
-            console.log('___Data en Boat Search Results___', this.boats )
+            // this.boats = data.map(boat => {
+            //     console.log('___Data from the controller:___', boat )
+            //   return { id: boat.Id, name: boat.Name }
+            // });
             this.isLoading = true;
         }
     }

@@ -1,25 +1,26 @@
 <template>
     <div onclick={selectBoat} class={tileClass}>
-      <!-- <div style={backgroundStyle} class="tile"> -->
-    </div>
+        
+        <div style={backgroundStyle} class="tile"> </div>
+        <div class="lower-third">
+            <h1 class="slds-truncate slds-text-heading_medium">{boat.Name}</h1>
+            <h2 class="slds-truncate slds-text-heading_small">{boat.Contact__r.Name}</h2>        
+        </div>
 
-    <div class="lower-third">
-        <h1 class="slds-truncate slds-text-heading_medium">{boat.name}</h1>
-        <h2 class="slds-truncate slds-text-heading_small">{boat.Contact__r.Name}</h2>
-    </div>
+        <div class="slds-text-body_small">
+            <p>
+                Price USD: 
+                <lightning-formatted-number value={boat.Price__c} maximum-fraction-digits="2"> </lightning-formatted-number>
+            </p>
+        </div>
 
-    <div class="slds-text-body_small">
-        <p>
-            Boat's Price USD
-            <lightning-formatted-number value={boat.Price__c} maximum-fraction-digits="2"></lightning-formatted-number>
-        </p>
-    </div>
-    <div class="slds-text-body_small">
-        <p>Boat's Length{boat.Length__c}</p>
-    </div>
-    <div class="slds-text-body_small">
-        <p>Boat's Type{boat.BoatType__r.Name}</p>
-    </div>
-    
+        <div class="slds-text-body_small">
+            <p>Length: {boat.Length__c}</p>
+        </div>
 
+        <div class="slds-text-body_small">
+            <p>Type: {boat.BoatType__r.Name}</p>
+        </div>
+
+    </div>
 </template>
